@@ -16,3 +16,9 @@
 """
 
 mac = "AAAA:BBBB:CCCC"
+
+first_octet = int((mac.split(":")[0]),16)
+second_octet = int((mac.split(":")[1]),16)
+third_octet = int((mac.split(":")[2]),16)
+result ="{:08b}{:08b}{:08b}"
+print(result.format(first_octet, second_octet, third_octet))
